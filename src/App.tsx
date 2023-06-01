@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 import { getCurrentWeather } from './services/getWeather';
-import logo from './assets/img/background_1.jpg';
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import SearchBar from './components/SearchBar';
 import CardInfo from './components/CardInfo';
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState('');
 
   useEffect(() => {
-    getCurrentWeather();
+ /*    getMap();  */
   }, []);
   
   return (
     <>
       <div className='parent-container'>
-        <SearchBar/>
-        <CardInfo/>
-        <img src={logo} className='bg' />
+        <SearchBar request={getCurrentWeather} setData={setData} data={data}/>
+        {data &&
+          <CardInfo data={data} />
+        }
+        
       </div>
     </>
   )
