@@ -41,7 +41,7 @@ const ModalInfo = ({ open, onClose, data, day, location }: { open: any, onClose:
             <Box sx={style}>
                 <h3 className="card-title">{
                     day ? new Date(day).toLocaleDateString('en-US', { weekday: 'long' }):
-                    'Now'
+                    'Today'
                 } </h3>
                 <Typography
                     sx={{ px: 4, mt: 2, maxHeight: "50vh", width: "100%", overflowY: "auto", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around" }}
