@@ -19,8 +19,8 @@ const CardInfo = ({ data }: { data: any }) => {
   return (
     <div className="box-glass">
       <div className="card info-card wrapper">
-        <DayInfo day={''} icon={condition.icon} temp_c={current.temp_c} info={condition.text} location={location} infoByHours={forecastday[0].hour}/>
-        {Object.keys(forecastday).slice(1).map((keyName, i) => (
+        <DayInfo day={''} icon={condition.icon} temp_c={current?.temp_c} info={condition?.text} location={location} infoByHours={forecastday[0]?.hour}/>
+        {Object.keys(forecastday).slice(1).map((i) => (
           <DayInfo key={i} day={forecastday[i]?.date}
             icon={forecastday[i]?.day.condition.icon}
             temp_c={forecastday[i]?.day.avgtemp_c}

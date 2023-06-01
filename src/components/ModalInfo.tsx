@@ -46,7 +46,7 @@ const ModalInfo = ({ open, onClose, data, day, location }: { open: any, onClose:
                 <Typography
                     sx={{ px: 4, mt: 2, maxHeight: "50vh", width: "100%", overflowY: "auto", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around" }}
                 >
-                    {Object.keys(data).map((keyName, i) => (
+                    {Object.keys(data).map((i) => (
                         <HourInfo key={i}
                             time={data[i]?.time}
                             icon={data[i]?.condition.icon}
